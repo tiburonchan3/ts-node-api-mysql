@@ -1,7 +1,7 @@
 import * as bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import * as BlueBird from 'bluebird';
-import { User, UserModel, UserAddModel, UserViewModel } from '../models/user';
+import { User, UserAddModel, UserViewModel } from '../models/user';
 
 export class UserService {
     private readonly _saltRounds = 12

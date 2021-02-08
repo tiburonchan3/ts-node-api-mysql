@@ -7,5 +7,15 @@ create table users(
     email text not null,
     password text not null,
     createdAt datetime,
-    updatedAt = datetime
+    updatedAt datetime
 );
+
+create table tasks(
+    id int auto_increment primary key,
+    nombre text not null,
+    status text not null,
+    userID int not null,
+    createdAt datetime,
+    updatedAt datetime,
+    constraint foreign key  userID references user(id)
+)

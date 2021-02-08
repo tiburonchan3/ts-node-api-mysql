@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import {userRouter} from './routes/user.routes';
+import {taskRouter} from './routes/task.routes';
 import {tokenGuard} from './middlewares/token-guard';
 
 const app = express();
@@ -18,6 +19,7 @@ app.get('/hello', (req: express.Request, res: express.Response) => {
 });
 
 app.use(tokenGuard())
+app.use('/',taskRouter)
 app.get('/hello-restricted', (req: express.Request, res: express.Response) => {
     res.json("Hello world restricted")
 });

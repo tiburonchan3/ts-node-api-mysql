@@ -2,7 +2,6 @@ import * as Sequelize from 'sequelize'
 import {sequelize} from '../instances/sequelize';
 
 export interface UserAddModel{
-    // id:number
     email: string
     password: string
 }
